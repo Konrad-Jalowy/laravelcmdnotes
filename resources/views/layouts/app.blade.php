@@ -30,7 +30,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach($categories as $category)
+                                <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
+                                @endforeach
+                            </ul>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
