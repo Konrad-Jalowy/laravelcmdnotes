@@ -32,15 +32,29 @@
                     <ul class="navbar-nav me-auto">
                     <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categories
+                                Notes
                             </a>
                             <ul class="dropdown-menu">
-                                @foreach($categories as $category)
-                                <li><a class="dropdown-item" href="#">{{ $category->name }}</a></li>
-                                @endforeach
+                               
+                                <li><a class="dropdown-item" href="{{ route('cmdcat') }}">CMD Notes</a></li>
+                      
                             </ul>
                             </li>
+                            @auth
+                 
+                 <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Add content
+                         </a>
+                         <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="{{ route('cmdcatadd') }}">Add CMD Category</a></li>
+                             <li><a class="dropdown-item" href="#">Add CMD Note</a></li>
+                         </ul>
+                         </li>
+         
+                 @endauth
                     </ul>
+                   
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

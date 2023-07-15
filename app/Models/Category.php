@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function movies() {
+    public function commands() {
         return $this->hasMany(Command::class);
     }
 }
