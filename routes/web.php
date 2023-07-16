@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::get('/cmdcat', [CommandController::class, 'showCategories'])->name('cmdcat');
 Route::get('/cmdcat/addnote', [CommandController::class, 'showForm'])->name('cmdcataddnote');
 Route::get('/cmdcat/delnote/{id}', [CommandController::class, 'destroy'])->name('cmdcatdelnote');
+Route::get('/cmdcat/updatenote/{id}', [CommandController::class, 'showUpdateForm'])->name('cmdcatupdatenote');
+Route::post('/cmdcat/updatenote/{id}', [CommandController::class, 'update'])->name('cmdcatupdatenotepost');
 Route::post('/cmdcat/addnote', [CommandController::class, 'post'])->name('cmdcataddnotepost');
 Route::get('/cmdcat/addcat', [CategoryController::class, 'showForm'])->name('cmdcatadd');
 Route::post('/cmdcat/addcat', [CategoryController::class, 'post'])->name('cmdcataddpost');

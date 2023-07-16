@@ -9,12 +9,7 @@ use App\Models\Category;
 class CategoryController extends Controller
 {
 
-    public function show() {
-        return "not implemented";
-    }
-    public function detail() {
-        return "not implemented";
-    }
+    
     public function showForm() {
         return view('cmdadd');
     }

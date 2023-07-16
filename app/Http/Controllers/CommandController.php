@@ -23,8 +23,10 @@ class CommandController extends Controller
         $categories = Category::all();
         return view('cmdaddnote', compact('categories'));
     }
-    public function showUpdateForm() {
-        return "not implemented";
+    public function showUpdateForm($id) {
+        $categories = Category::all();
+        $command = Command::findOrFail($id);
+        return view('cmdupdatenote', compact('categories', 'command'));
     }
     public function post(CommandRequest $request) {
         $validated = $request->validated();
@@ -40,8 +42,14 @@ class CommandController extends Controller
         return redirect('/');
 
     }
-    public function update() {
-        return "not implemented";
+    public function update(CommandRequest $request, $id) {
+        $validated = $request->validated();
+        $command = Command::findOrFail($id);
+        $command->command = $validated['command'] ;
+        $command->description = $validated['description'];
+        $command->category_id = $validated['category_id'];
+        $command->save();
+        return redirect('/');
     }
     public function destroy($id) {
         $command = Command::findOrFail($id);
