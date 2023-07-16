@@ -27,6 +27,8 @@ Route::post('/cmdcat/addnote', [CommandController::class, 'post'])->name('cmdcat
 Route::get('/cmdcat/addcat', [CategoryController::class, 'showForm'])->name('cmdcatadd');
 Route::post('/cmdcat/addcat', [CategoryController::class, 'post'])->name('cmdcataddpost');
 Route::get('/cmdcat/{id}/delcat', [CategoryController::class, 'destroy'])->name('cmdcatdel');
+Route::get('/cmdcat/{id}/updatecat', [CategoryController::class, 'showUpdateForm'])->name('cmdcatupdate');
+Route::post('/cmdcat/{id}/updatecat', [CategoryController::class, 'update'])->name('cmdcatupdatepost');
 Route::get('/cmdcat/{id}', [CommandController::class, 'show'])->name('cmdcatid');
 
 
