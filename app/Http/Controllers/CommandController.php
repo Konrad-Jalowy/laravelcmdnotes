@@ -18,9 +18,7 @@ class CommandController extends Controller
         $commands = Command::where('category_id', $id)->get();
         return view("cmdcatid", compact('commands'));
     }
-    public function detail() {
-        return "not implemented";
-    }
+
     public function showForm() {
         $categories = Category::all();
         return view('cmdaddnote', compact('categories'));
@@ -32,10 +30,9 @@ class CommandController extends Controller
         $validated = $request->validated();
         $command = new Command();
         $category = Category::findOrFail($validated['category_id']);
-        $commandText = '```sh
-        ' . $validated['command'] . '
-        ```';
-        $command->command = Str::markdown($commandText);
+        // $commandText = '```sh' . $validated['command'] . '```';
+        // $command->command = Str::markdown($commandText);
+        $command->command = $validated['command'] ;
         $command->description = $validated['description'];
         // $command->associate($category);
         $command->category_id = $validated['category_id'];
@@ -46,7 +43,9 @@ class CommandController extends Controller
     public function update() {
         return "not implemented";
     }
-    public function destroy() {
-        return "not implemented";
+    public function destroy($id) {
+        $command = Command::findOrFail($id);
+        $command->delete();
+        return redirect('/');
     }
 }

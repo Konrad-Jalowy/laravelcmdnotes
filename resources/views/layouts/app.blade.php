@@ -48,7 +48,7 @@
                          </a>
                          <ul class="dropdown-menu">
                              <li><a class="dropdown-item" href="{{ route('cmdcatadd') }}">Add CMD Category</a></li>
-                             <li><a class="dropdown-item" href="#">Add CMD Note</a></li>
+                             <li><a class="dropdown-item" href="{{route('cmdcataddnote')}}">Add CMD Note</a></li>
                          </ul>
                          </li>
          

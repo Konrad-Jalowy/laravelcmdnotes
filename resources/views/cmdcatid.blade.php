@@ -3,7 +3,13 @@
 
 <ul>
     @foreach($commands as $command)
-    <li><a href="">{!! $command->command !!}</a></li>
+    <li>
+    <details>
+        <summary>{{$command->command }}</summary>
+        <p>{{$command->description}}</p>
+        <button><a href="{{route('cmdcatdelnote', $command->id)}}">Delete</a></button>
+    </details>
+    </li>
     @endforeach
 </ul>
 @endsection
