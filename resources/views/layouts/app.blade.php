@@ -37,6 +37,8 @@
                             <ul class="dropdown-menu">
                                
                                 <li><a class="dropdown-item" href="{{ route('cmdcat') }}">CMD Notes</a></li>
+                                <li><a class="dropdown-item" href="#">Frameworks</a></li>
+                                <li><a class="dropdown-item" href="#">Functions</a></li>
                       
                             </ul>
                             </li>
@@ -49,6 +51,9 @@
                          <ul class="dropdown-menu">
                              <li><a class="dropdown-item" href="{{ route('cmdcatadd') }}">Add CMD Category</a></li>
                              <li><a class="dropdown-item" href="{{route('cmdcataddnote')}}">Add CMD Note</a></li>
+                             <li><a class="dropdown-item" href="#">Add Language</a></li>
+                             <li><a class="dropdown-item" href="#">Add Framework</a></li>
+                             <li><a class="dropdown-item" href="#">Add Function</a></li>
                          </ul>
                          </li>
          
