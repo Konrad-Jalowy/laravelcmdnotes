@@ -13,7 +13,7 @@
             @if($category->id === $command->category_id)
             <option value="{{$category->id}}" selected>{{$category->name}}</option>
             @else
-            <option value="{{$category->id}}" selected>{{$category->name}}</option>
+            <option value="{{$category->id}}">{{$category->name}}</option>
             @endif
             @endforeach
         </select>
