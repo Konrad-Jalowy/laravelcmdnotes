@@ -9,6 +9,11 @@ class LangController extends Controller
 {
     public function showAddForm()
     {
+        return view('langadd');
+    }
+
+    public function create(LangRequest $request)
+    {
         return "not implemented";
     }
 }

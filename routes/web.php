@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Category;
 use App\Http\Controllers\CommandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('/cmdcat/{id}/delcat', [CategoryController::class, 'destroy'])->name(
 Route::get('/cmdcat/{id}/updatecat', [CategoryController::class, 'showUpdateForm'])->name('cmdcatupdate');
 Route::post('/cmdcat/{id}/updatecat', [CategoryController::class, 'update'])->name('cmdcatupdatepost');
 Route::get('/cmdcat/{id}', [CommandController::class, 'show'])->name('cmdcatid');
+Route::get('/lang/add', [LangController::class, 'showAddForm'])->name('langadd');
 
 
 Auth::routes();

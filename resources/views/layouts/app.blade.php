@@ -51,7 +51,7 @@
                          <ul class="dropdown-menu">
                              <li><a class="dropdown-item" href="{{ route('cmdcatadd') }}">Add CMD Category</a></li>
                              <li><a class="dropdown-item" href="{{route('cmdcataddnote')}}">Add CMD Note</a></li>
-                             <li><a class="dropdown-item" href="#">Add Language</a></li>
+                             <li><a class="dropdown-item" href="{{ route('langadd') }}">Add Language</a></li>
                              <li><a class="dropdown-item" href="#">Add Framework</a></li>
                              <li><a class="dropdown-item" href="#">Add Function</a></li>
                          </ul>
