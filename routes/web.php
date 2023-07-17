@@ -34,6 +34,7 @@ Route::get('/cmdcat/{id}/updatecat', [CategoryController::class, 'showUpdateForm
 Route::post('/cmdcat/{id}/updatecat', [CategoryController::class, 'update'])->name('cmdcatupdatepost');
 Route::get('/cmdcat/{id}', [CommandController::class, 'show'])->name('cmdcatid');
 Route::get('/lang/add', [LangController::class, 'showAddForm'])->name('langadd');
+Route::post('/lang/add', [LangController::class, 'create'])->name('langaddpost');
 
 
 Auth::routes();
